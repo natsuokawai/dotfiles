@@ -34,11 +34,17 @@ Plug 'tidalcycles/vim-tidal'
 call plug#end()
 
 "NERDTree
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> ;NERDTreeToggle<CR>
+
+"fugitive
+map <C-b> ;Gblame<CR>
 
 "fzf
-map <C-s> :GFiles<CR>
-map <C-y> :History<CR>
+map <C-s> ;GFiles<CR>
+map <C-y> ;History<CR>
+
+noremap ; :
+noremap : ;
 
 "ale
 let g:ale_ruby_rubocop_executable = 'docker run --rm --volume "$PWD:/app" cagedata/rubocop'
@@ -59,6 +65,7 @@ let g:vim_markdown_folding_disabled = 1
 
 autocmd BufNewFile,BufRead .irbrc  set filetype=ruby
 autocmd BufNewFile,BufRead .pryrc  set filetype=ruby
+autocmd BufNewFile,BufRead .jbuilder  set filetype=ruby
 
 "==================================================
 " Editor settings
