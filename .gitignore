@@ -36,4 +36,6 @@
 !/LICENSE
 !.gitignore
 !.gitkeep
+!.gitconfig
 !/setup.sh
+
