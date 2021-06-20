@@ -1,6 +1,6 @@
 [user]
 	name = natsuokawai
-	email =
+	email = kawai.natsuo@gmail.com
 [core]
   editor = vim
 	excludesfile = $HOME/.gitignore_global
