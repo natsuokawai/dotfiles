@@ -22,15 +22,12 @@ Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'thinca/vim-ref'
 Plug 'thinca/vim-quickrun'
 Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
 Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-Plug 'ollykel/v-vim'
-Plug 'slim-template/vim-slim'
 Plug 'pangloss/vim-javascript'
-Plug 'tidalcycles/vim-tidal'
 call plug#end()
 
 "NERDTree
