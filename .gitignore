@@ -31,7 +31,7 @@
 !/.config/fish/functions/
 !/.config/fish/functions/**
 !/.zshrc
-
+!/.gitignore_global
 
 !/README.md
 !/LICENSE
