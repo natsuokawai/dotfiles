@@ -4,6 +4,13 @@ alias d="docker"
 alias dc="docker compose"
 alias g="git"
 
+if (( ${+commands[exa]} )); then
+  alias ls="exa --icons"
+fi
+if (( ${+commands[bat]} )); then
+  alias cat="bat"
+fi
+
 alias zshrc="vi ~/.zshrc"
 alias vimrc="vi ~/.vimrc"
 
@@ -11,13 +18,7 @@ autoload -Uz colors
 colors
 
 setopt auto_cd
-function chpwd() {
-  if (( ${+commands[exa]} )); then
-    exa --icons
-  else
-    ls
-  fi
-}
+function chpwd() { ls }
 
 setopt correct
 
