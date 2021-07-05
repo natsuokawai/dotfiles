@@ -3,13 +3,21 @@ export LANG=ja_JP.UTF-8
 alias d="docker"
 alias dc="docker compose"
 alias g="git"
+
 alias zshrc="vi ~/.zshrc"
+alias vimrc="vi ~/.vimrc"
 
 autoload -Uz colors
 colors
 
 setopt auto_cd
-function chpwd() { ls }
+function chpwd() {
+  if (( ${+commands[exa]} )); then
+    exa --icons
+  else
+    ls
+  fi
+}
 
 setopt correct
 
