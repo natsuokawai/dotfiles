@@ -1,5 +1,28 @@
 export LANG=ja_JP.UTF-8
 
+setopt auto_cd
+function chpwd() { ls }
+
+setopt correct
+
+autoload -U compinit
+compinit
+
+## history
+HISTFILE=~/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=1000000
+setopt hist_ignore_dups
+setopt share_history
+
+## rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)" 
+
+
+##################################################
+# aliases                                        #
+##################################################
 alias d="docker"
 alias dc="docker compose"
 alias g="git"
@@ -14,22 +37,12 @@ fi
 alias zshrc="vi ~/.zshrc"
 alias vimrc="vi ~/.vimrc"
 
+
+##################################################
+# appearance                                     #
+##################################################
 autoload -Uz colors
 colors
-
-setopt auto_cd
-function chpwd() { ls }
-
-setopt correct
-
-HISTFILE=~/.zsh_history
-HISTSIZE=1000000
-SAVEHIST=1000000
-setopt hist_ignore_dups
-setopt share_history
-
-autoload -U compinit
-compinit
 
 PROMPT="%(?.%{${fg[green]}%}.%{${fg[red]}%})%n${reset_color}@${fg[blue]}%m${reset_color}(%*%) %~
 %# "
@@ -45,6 +58,10 @@ zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
+
+##################################################
+# functions                                      #
+##################################################
 alias google='_searchByGoogle'
 _searchByGoogle () {
     local str opt
