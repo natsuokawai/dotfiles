@@ -30,7 +30,7 @@ setopt share_history
 autoload -U compinit
 compinit
 
-PROMPT="%(?.%{${fg[green]}%}.%{${fg[red]}%})%n${reset_color}@${fg[blue]}%m${reset_color}(%*%)${vcs_info_msg_0_} %~
+PROMPT="%(?.%{${fg[green]}%}.%{${fg[red]}%})%n${reset_color}@${fg[blue]}%m${reset_color}(%*%) %~
 %# "
 
 RPROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
