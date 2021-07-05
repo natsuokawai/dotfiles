@@ -3,7 +3,7 @@
 	email = kawai.natsuo@gmail.com
 [core]
   editor = vim
-	excludesfile = $HOME/.gitignore_global
+	excludesfile = ~/.gitignore_global
   pager = delta # https://github.com/dandavison/delta
 [color]
   ui = auto
