@@ -1,3 +1,24 @@
+##################################################
+# aliases                                        #
+##################################################
+alias d="docker"
+alias dc="docker compose"
+alias g="git"
+
+if (( ${+commands[exa]} )); then
+  alias ls="exa --icons"
+fi
+if (( ${+commands[bat]} )); then
+  alias cat="bat"
+fi
+
+alias zshrc="vi ~/.zshrc"
+alias vimrc="vi ~/.vimrc"
+
+
+##################################################
+# basic                                          #
+##################################################
 export LANG=ja_JP.UTF-8
 
 setopt auto_cd
@@ -18,24 +39,6 @@ setopt share_history
 ## rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)" 
-
-
-##################################################
-# aliases                                        #
-##################################################
-alias d="docker"
-alias dc="docker compose"
-alias g="git"
-
-if (( ${+commands[exa]} )); then
-  alias ls="exa --icons"
-fi
-if (( ${+commands[bat]} )); then
-  alias cat="bat"
-fi
-
-alias zshrc="vi ~/.zshrc"
-alias vimrc="vi ~/.vimrc"
 
 
 ##################################################
@@ -71,4 +74,21 @@ _searchByGoogle () {
         done
     fi
     open https://www.google.co.jp/search\?q\=$str
+}
+
+alias sbox='_scrapboxToday'
+_scrapboxToday () {
+    name=`date "+%Y-%m-%d"`
+    open https://scrapbox.io/natsuokawai-diary/$name
+}
+
+alias memo='_scrapboxMemo'
+_scrapboxMemo () {
+    local str opt
+    if [ $# != 0 ]; then
+        for i in $*; do
+            str="$str${str:+_}$i"
+        done
+    fi
+    open https://scrapbox.io/natsuokawai/$str
 }
