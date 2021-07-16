@@ -1,10 +1,6 @@
 ##################################################
 # aliases                                        #
 ##################################################
-alias d="docker"
-alias dc="docker compose"
-alias g="git"
-
 if (( ${+commands[exa]} )); then
   alias ls="exa --icons"
 fi
@@ -12,9 +8,25 @@ if (( ${+commands[bat]} )); then
   alias cat="bat"
 fi
 
-alias zshrc="vi ~/.zshrc"
+alias zshrc="vi ~/.zshrc && source ~/.zshrc"
 alias vimrc="vi ~/.vimrc"
 
+## git
+alias g="git"
+alias gad="git add"
+alias gco="git checkout"
+alias gcm="git commit"
+alias gd="git diff"
+alias gs="git status"
+
+## docker
+alias d="docker"
+alias dc="docker compose"
+
+## rails
+alias rs="bundle exec rails server"
+alias rc="bundle exec rails console"
+alias rsp="bundle exec rspec"
 
 ##################################################
 # basic                                          #
@@ -35,10 +47,6 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 setopt hist_ignore_dups
 setopt share_history
-
-## rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)" 
 
 
 ##################################################
@@ -92,3 +100,17 @@ _scrapboxMemo () {
     fi
     open https://scrapbox.io/natsuokawai/$str
 }
+
+##################################################
+# app setings                                    #
+##################################################
+## rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)" 
+
+## mysql
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
+## nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
