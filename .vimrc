@@ -9,6 +9,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin()
+Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
@@ -30,6 +31,11 @@ Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript'
 Plug 'dag/vim2hs'
 call plug#end()
+
+"
+syntax enable
+set background=dark
+colorscheme solarized
 
 "NERDTree
 map <C-n> ;NERDTreeToggle<CR>
@@ -65,7 +71,6 @@ autocmd BufNewFile,BufRead .jbuilder  set filetype=ruby
 "==================================================
 " Editor settings
 "==================================================
-syntax on
 set tabstop=2
 set incsearch
 
