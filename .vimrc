@@ -82,10 +82,11 @@ set smartindent
 set smarttab
 set splitbelow
 
+"run `vim --version | grep clipboard` and check if `+clipboard` is displayed
+set clipboard+=unnamed 
+
 if has("autocmd")
-  "ファイルタイプの検索を有効にする
   filetype plugin on
-  "ファイルタイプに合わせたインデントを利用
   filetype indent on
   "sw=shiftwidth, sts=softtabstop, ts=tabstop, et=expandtab
   autocmd FileType c           setlocal sw=4 sts=4 ts=4 et
@@ -144,7 +145,6 @@ function! s:on_lsp_buffer_enabled() abort
     " autocmd BufWritePre <buffer> LspDocumentFormatSync
 endfunction
 
-" Decorations
 augroup lsp_install
     au!
     let g:lsp_signs_enabled = 1         " enable signs
