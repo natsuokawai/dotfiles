@@ -121,7 +121,7 @@ zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=61,underline'
 
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
