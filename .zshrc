@@ -114,8 +114,6 @@ fi
 
 source ~/.zplug/init.zsh
 
-zplug "peterhurford/git-aliases.zsh"
-zplug "plugins/git",   from:oh-my-zsh
 zplug "zplug/zplug", hook-build:'zplug --self-manage'
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
