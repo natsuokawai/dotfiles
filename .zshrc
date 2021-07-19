@@ -37,9 +37,10 @@ setopt auto_cd
 function chpwd() { ls }
 
 setopt correct
+setopt auto_list
+setopt auto_menu
 
-autoload -U compinit
-compinit
+autoload -Uz compinit && compinit
 
 ## history
 HISTFILE=~/.zsh_history
@@ -52,8 +53,7 @@ setopt share_history
 ##################################################
 # appearance                                     #
 ##################################################
-autoload -Uz colors
-colors
+autoload -Uz colors && colors
 
 PROMPT="%(?.%{${fg[green]}%}.%{${fg[red]}%})%n${reset_color}@${fg[blue]}%m${reset_color}(%*%) %~
 %# "
@@ -69,6 +69,9 @@ zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
+export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*:default' menu select=1
 
 ##################################################
 # functions                                      #
@@ -100,6 +103,34 @@ _scrapboxMemo () {
     fi
     open https://scrapbox.io/natsuokawai/$str
 }
+
+
+##################################################
+# zplug                                          #
+##################################################
+if [[ ! -d ~/.zplug ]];then
+  git clone https://github.com/zplug/zplug ~/.zplug
+fi
+
+source ~/.zplug/init.zsh
+
+zplug "peterhurford/git-aliases.zsh"
+zplug "plugins/git",   from:oh-my-zsh
+zplug "zplug/zplug", hook-build:'zplug --self-manage'
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
+
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+zplug load
 
 ##################################################
 # app setings                                    #
