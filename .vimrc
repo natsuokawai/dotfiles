@@ -38,7 +38,7 @@ set background=dark
 colorscheme solarized
 
 "NERDTree
-map <C-n> ;NERDTreeToggle<CR>
+map <C-t> ;NERDTreeToggle<CR>
 
 "fugitive
 map <C-b> ;Gblame<CR>
@@ -82,6 +82,10 @@ set smartindent
 set smarttab
 set splitbelow
 
+" for US keyboard layout
+noremap ; :
+noremap : ;
+
 "run `vim --version | grep clipboard` and check if `+clipboard` is displayed
 set clipboard+=unnamed 
 
@@ -111,8 +115,8 @@ endif
 inoremap <C-c> <Esc>
 
 "airline keybinding
-nmap <C-h> <Plug>AirlineSelectPrevTab
-nmap <C-l> <Plug>AirlineSelectNextTab
+nmap <C-p> <Plug>AirlineSelectPrevTab
+nmap <C-n> <Plug>AirlineSelectNextTab
 
 "==================================================
 " Haskell
