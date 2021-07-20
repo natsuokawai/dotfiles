@@ -30,6 +30,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript'
 Plug 'dag/vim2hs'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 "
@@ -47,14 +48,20 @@ map <C-b> ;Gblame<CR>
 map <C-s> ;GFiles<CR>
 map <C-y> ;History<CR>
 
-noremap ; :
-noremap : ;
-
 "ale
 let g:ale_ruby_rubocop_executable = 'docker run --rm --volume "$PWD:/app" cagedata/rubocop'
 let g:ale_fixers = {
 \   'ruby': ['rubocop'],
 \}
+
+"vim-tmux-navigator
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+"nnoremap <silent> <c-p> :TmuxNavigatePrevious<cr>
 
 "==================================================
 " Appearance
