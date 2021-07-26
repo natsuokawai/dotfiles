@@ -11,6 +11,8 @@ fi
 alias zshrc="vi ~/.zshrc && source ~/.zshrc"
 alias vimrc="vi ~/.vimrc"
 
+alias cl="clear"
+
 ## git
 alias g="git"
 alias gad="git add"
