@@ -17,7 +17,8 @@ alias gad="git add"
 alias gco="git checkout"
 alias gcm="git commit"
 alias gd="git diff"
-alias gs="git status"
+alias gst="git status"
+alias cpbr="git_current_branch | pbcopy" # copy current git branch name to clipboard
 
 ## docker
 alias d="docker"
