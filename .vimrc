@@ -49,10 +49,12 @@ map <C-s> ;GFiles<CR>
 map <C-y> ;History<CR>
 
 "ale
-let g:ale_ruby_rubocop_executable = 'docker run --rm --volume "$PWD:/app" cagedata/rubocop'
-let g:ale_fixers = {
+"let g:ale_ruby_rubocop_executable = 'docker run --rm --volume "$PWD:/app" cagedata/rubocop'
+let g:ale_linters = {
 \   'ruby': ['rubocop'],
 \}
+let g:ale_linters_explicit = 1 
+let g:airline#extensions#ale#enabled = 1
 
 "vim-tmux-navigator
 let g:tmux_navigator_no_mappings = 1
