@@ -56,7 +56,6 @@ let g:ale_linters = {
 \}
 let g:ale_linters_explicit = 1 
 let g:airline#extensions#ale#enabled = 1
-let g:ale_haskell_hls_executable = 'haskell-language-server-wrapper --debug --logfile log.txt'
 
 "vim-tmux-navigator
 let g:tmux_navigator_no_mappings = 1
@@ -131,7 +130,7 @@ nmap <C-p> <Plug>AirlineSelectPrevTab
 nmap <C-n> <Plug>AirlineSelectNextTab
 
 "==================================================
-" Haskell
+" vim-lsp
 "==================================================
 if (executable('haskell-language-server-wrapper'))
   au User lsp_setup call lsp#register_server({
@@ -146,33 +145,37 @@ function! s:on_lsp_buffer_enabled() abort
     setlocal signcolumn=yes
     if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
     nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> gs <plug>(lsp-document-symbol-search)
+    nmap <buffer> gS <plug>(lsp-workspace-symbol-search)
     nmap <buffer> gr <plug>(lsp-references)
-    nmap <buffer> gf <plug>(lsp-code-action)
     nmap <buffer> gi <plug>(lsp-implementation)
     nmap <buffer> gt <plug>(lsp-type-definition)
-    nmap <buffer> <F2> <plug>(lsp-rename)
-    nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
-    nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
+    nmap <buffer> <leader>rn <plug>(lsp-rename)
+    nmap <buffer> [g <plug>(lsp-previous-diagnostic)
+    nmap <buffer> ]g <plug>(lsp-next-diagnostic)
     nmap <buffer> K <plug>(lsp-hover)
-    xmap <buffer> f <plug>(lsp-document-range-format)
-    nmap <buffer> <F5> <plug>(lsp-code-lens)
+    inoremap <buffer> <expr><c-f> lsp#scroll(+4)
+    inoremap <buffer> <expr><c-d> lsp#scroll(-4)
 
-    " buffer format on save
-    " autocmd BufWritePre <buffer> LspDocumentFormatSync
+    let g:lsp_format_sync_timeout = 1000
+    autocmd BufWritePre <buffer> LspDocumentFormatSync
+
+    " refer to doc to add more commands
 endfunction
 
 augroup lsp_install
     au!
+
     let g:lsp_signs_enabled = 1         " enable signs
     let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
     let g:lsp_signs_error = {'text': '✗'}
-    " let g:lsp_signs_warning = {'text': '‼', 'icon': '/path/to/some/icon'} " icons require GUI
-    " let g:lsp_signs_hint = {'icon': '/path/to/some/other/icon'} " icons require GUI
+    let g:lsp_signs_warning = {'text': '‼', 'icon': '/path/to/some/icon'} " icons require GUI
+    let g:lsp_signs_hint = {'icon': '/path/to/some/other/icon'} " icons require GUI
     let g:lsp_signs_warning = {'text': '‼'}
     let g:lsp_highlight_references_enabled = 1
     highlight link LspErrorText GruvboxRedSign " requires gruvbox
     highlight clear LspWarningLine
-    " highlight lspReference ctermfg=red guifg=red ctermbg=green guibg=green
+    highlight lspReference ctermfg=red guifg=red ctermbg=green guibg=green
     highlight lspReference guibg=#303010
 
     " call s:on_lsp_buffer_enabled only for languages that has the server registered.
