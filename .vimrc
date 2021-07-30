@@ -52,9 +52,11 @@ map <C-y> ;History<CR>
 "let g:ale_ruby_rubocop_executable = 'docker run --rm --volume "$PWD:/app" cagedata/rubocop'
 let g:ale_linters = {
 \   'ruby': ['rubocop'],
+\   'haskell': ['hls'],
 \}
 let g:ale_linters_explicit = 1 
 let g:airline#extensions#ale#enabled = 1
+let g:ale_haskell_hls_executable = 'haskell-language-server-wrapper --debug --logfile log.txt'
 
 "vim-tmux-navigator
 let g:tmux_navigator_no_mappings = 1
