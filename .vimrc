@@ -31,6 +31,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript'
 Plug 'dag/vim2hs'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'mattn/vim-goimports'
 call plug#end()
 
 "
