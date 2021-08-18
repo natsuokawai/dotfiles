@@ -20,6 +20,7 @@ alias gco="git checkout"
 alias gcm="git commit"
 alias gd="git diff"
 alias gst="git status"
+alias gs="git status"
 alias cpbr="git_current_branch | pbcopy" # copy current git branch name to clipboard
 
 ## docker
@@ -35,6 +36,8 @@ alias rsp="bundle exec rspec"
 # basic                                          #
 ##################################################
 export LANG=ja_JP.UTF-8
+export LESS="-iRMXS"
+export PATH=/usr/local/bin:$PATH
 
 setopt auto_cd
 function chpwd() { ls }
