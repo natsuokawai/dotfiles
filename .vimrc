@@ -10,7 +10,6 @@ endif
 
 call plug#begin()
 Plug 'altercation/vim-colors-solarized'
-Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -22,9 +21,12 @@ Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'thinca/vim-ref'
 Plug 'thinca/vim-quickrun'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-rails'
 Plug 'dense-analysis/ale'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rbenv'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'plasticboy/vim-markdown'
@@ -32,6 +34,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'dag/vim2hs'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mattn/vim-goimports'
+Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
 "
@@ -183,3 +186,14 @@ augroup lsp_install
     " call s:on_lsp_buffer_enabled only for languages that has the server registered.
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
+"==================================================
+" ruby
+"==================================================
+" Run followig commands in a shell for code-jump in vim.
+" % brew install ctags
+" % gem install gem-ctags
+" % gem ctags
+" % mkdir -p ~/.rbenv/plugins
+" % git clone git://github.com/tpope/rbenv-ctags.git ~/.rbenv/plugins/rbenv-ctags
+" % rbenv ctags
