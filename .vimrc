@@ -122,9 +122,10 @@ endif
 let g:vim_markdown_new_list_item_indent = 2
 
 if executable('rg')
-    let &grepprg = 'rg --vimgrep --hidden'
+    let &grepprg = 'rg --vimgrep'
     set grepformat=%f:%l:%c:%m
 endif
+autocmd QuickFixCmdPost *grep* cwindow
 
 "==================================================
 " Key mapping
