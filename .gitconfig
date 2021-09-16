@@ -13,17 +13,16 @@
   sh = show
   so = remote show origin
   ft = fetch
-  up = pull --rebase       # pull rebase
-  rbm = rebase master      # masterへのrebaseはよく使うのでalias
+  up = pull --rebase
+  rbm = rebase main
   ad = add
-  ci = commit -a           # modifiedなファイルを全てstageへ
-  cam = commit -a --amend  # 直前のcommitを修正
+  ci = commit -a
   co = checkout
-  com = checkout master
+  com = checkout main
   dt = difftool
   poh = push origin head
   br = branch
-  cm = commit --allow-empty
+  cm = commit
 
 [delta]
   features = side-by-side line-numbers decorations
