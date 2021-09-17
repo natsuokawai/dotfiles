@@ -36,6 +36,7 @@ Plug 'dag/vim2hs'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mattn/vim-goimports'
 Plug 'rust-lang/rust.vim'
+Plug 'sebdah/vim-delve', { 'for': ['go'] }
 Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
@@ -48,7 +49,7 @@ colorscheme solarized
 map <C-t> ;NERDTreeToggle<CR>
 
 "fugitive
-map <C-b> ;Gblame<CR>
+map <C-b> ;Git blame<CR>
 
 "fzf
 map <C-s> ;GFiles<CR>
