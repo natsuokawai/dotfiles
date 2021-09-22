@@ -20,7 +20,7 @@
   co = checkout
   com = checkout main
   dt = difftool
-  poh = push origin head
+  poh = push origin HEAD
   br = branch
   cm = commit
 
