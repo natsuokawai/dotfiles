@@ -38,6 +38,7 @@ alias rsp="bundle exec rspec"
 export LANG=ja_JP.UTF-8
 export LESS="-iRMXS"
 export PATH=/usr/local/bin:$PATH
+export PATH=$PATH:~/bin
 
 setopt auto_cd
 function chpwd() { ls }

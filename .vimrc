@@ -2,6 +2,8 @@
 " Plugins
 "==================================================
 
+let mapleader = "\<Space>"
+
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -24,6 +26,7 @@ Plug 'thinca/vim-ref'
 Plug 'thinca/vim-quickrun'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
@@ -34,10 +37,10 @@ Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript'
 Plug 'dag/vim2hs'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'mattn/vim-goimports'
 Plug 'rust-lang/rust.vim'
 Plug 'sebdah/vim-delve', { 'for': ['go'] }
 Plug 'vim-ruby/vim-ruby'
+Plug 'vim-test/vim-test'
 call plug#end()
 
 "
@@ -86,6 +89,17 @@ nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 " rust.vim
 let g:rust_clip_command = 'pbcopy'
 
+" vim-test
+nnoremap <silent> <leader>t :TestNearest<CR>
+nnoremap <silent> <leader>T :TestFile<CR>
+nnoremap <silent> <leader>a :TestSuite<CR>
+nnoremap <silent> <leader>l :TestLast<CR>
+nnoremap <silent> <leader>g :TestVisit<CR>
+let test#strategy = "dispatch"
+
+" quick-run
+nnoremap <silent> <leader>r :QuickRun<CR>
+
 "==================================================
 " Appearance
 "==================================================
@@ -101,6 +115,7 @@ autocmd BufNewFile,BufRead .jbuilder  set filetype=ruby
 "==================================================
 " Editor settings
 "==================================================
+lan en_US
 set tabstop=2
 set incsearch
 
@@ -127,6 +142,7 @@ if has("autocmd")
   autocmd FileType cpp         setlocal sw=4 sts=4 ts=4 et
   autocmd FileType html        setlocal sw=4 sts=4 ts=4 et
   autocmd FileType ruby        setlocal sw=2 sts=2 ts=2 et
+  autocmd FileType javascript  setlocal sw=2 sts=2 ts=2 et
   autocmd FileType go          setlocal sw=2 sts=2 ts=2 et
   autocmd FileType eruby       setlocal sw=2 sts=2 ts=2 et
   autocmd FileType haskell     setlocal sw=2 sts=2 ts=2 et
