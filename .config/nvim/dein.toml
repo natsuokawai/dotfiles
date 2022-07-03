@@ -1,0 +1,37 @@
+# buffer list that lives in the tabline
+[[plugins]]
+repo = 'ap/vim-buftabline'
+
+# Change input mode to English when exiting insert mode
+[[plugins]]
+repo = 'yoshida-m-3/vim-im-select'
+hook_add = '''
+  let g:im_select_default = 'com.google.inputmethod.Japanese.Roman'
+'''
+
+# LSP and other support tools
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+source = 'release'
+build = 'coc#util#install()'
+hook_add = '''
+  let g:coc_global_extensions = [
+  \'coc-explorer',
+  \'coc-lists',
+  \'coc-git',
+  \'coc-tsserver',
+  \'coc-styled-components',
+  \'coc-json',
+  \]
+  if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+    let g:coc_global_extensions += ['coc-prettier']
+  endif
+
+  if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+    let g:coc_global_extensions += ['coc-eslint']
+  endif
+  :nmap <Leader>e <Cmd>CocCommand explorer<CR>
+  :nmap <Leader>lf <Cmd>CocList files<CR>
+  :nmap <Leader>lb <Cmd>CocList buffers<CR>
+  :nmap <Leader>lr <Cmd>CocList mru<CR>
+'''
