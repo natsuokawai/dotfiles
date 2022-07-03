@@ -11,42 +11,62 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin()
+" Common
+"" Apperance
 Plug 'altercation/vim-colors-solarized'
-Plug 'airblade/vim-gitgutter'
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+"" File
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+"" Git
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter' " shows a git diff in the sign column
+
+"" LSP/Linter
 Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lexiv'
 Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'thinca/vim-ref'
-Plug 'thinca/vim-quickrun'
-Plug 'dense-analysis/ale'
-Plug 'tpope/vim-bundler'
+Plug 'dense-analysis/ale' " Asynchronous Lint Engine
+Plug 'thinca/vim-ref' " Reference viewer
+
+"" Testing
+Plug 'vim-test/vim-test'
 Plug 'tpope/vim-dispatch'
+
+"" Others
+Plug 'mattn/vim-lexiv' "Auto close parentheses
+Plug 'thinca/vim-quickrun'
+Plug 'plasticboy/vim-markdown'
+Plug 'christoomey/vim-tmux-navigator'
+
+" Language specific
+"" Ruby / Rails
+Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rbenv'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript'
-Plug 'dag/vim2hs'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'rust-lang/rust.vim'
-Plug 'sebdah/vim-delve', { 'for': ['go'] }
 Plug 'vim-ruby/vim-ruby'
-Plug 'vim-test/vim-test'
+
+"" Haskell
+" Plug 'dag/vim2hs'
+
+"" Rust
+" Plug 'rust-lang/rust.vim'
+
+"" Go
+" Plug 'sebdah/vim-delve', { 'for': ['go'] }
 call plug#end()
 
 "
 syntax enable
 set background=dark
-colorscheme solarized
 
 "NERDTree
 map <C-t> ;NERDTreeToggle<CR>
@@ -221,7 +241,7 @@ augroup lsp_install
 augroup END
 
 "==================================================
-" ruby
+" Ruby
 "==================================================
 " Run followig commands in a shell for code-jump in vim.
 " % brew install ctags
