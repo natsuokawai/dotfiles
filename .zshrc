@@ -13,6 +13,8 @@ alias vimrc="vi ~/.vimrc"
 
 alias cl="clear"
 
+alias vi="nvim"
+
 ## git
 alias g="git"
 alias gad="git add"
@@ -28,6 +30,7 @@ alias d="docker"
 alias dc="docker compose"
 
 ## rails
+alias be="bundle exec"
 alias rs="bundle exec rails server"
 alias rc="bundle exec rails console"
 alias rsp="bundle exec rspec"
@@ -143,7 +146,7 @@ zplug load
 ##################################################
 ## rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)" 
+eval "$(rbenv init -)"
 
 ## mysql
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
@@ -151,6 +154,7 @@ export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 ## nvm
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ## ghcup
 export PATH="$HOME/.ghcup/bin:$PATH"
@@ -163,8 +167,3 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:$GOPATH/bin
-
-## nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
