@@ -2,7 +2,7 @@
   name = natsuokawai
   email = kawai.natsuo@gmail.com
 [core]
-  editor = vim
+  editor = nvim
   excludesfile = ~/.gitignore_global
   pager = delta # https://github.com/dandavison/delta
 [color]
@@ -25,7 +25,8 @@
   cm = commit
 
 [delta]
-  features = side-by-side line-numbers decorations
+ # features = side-by-side line-numbers decorations
+  features = line-numbers decorations
   syntax-theme = Dracula
   plus-style = syntax "#003800"
   minus-style = syntax "#3f0001"
