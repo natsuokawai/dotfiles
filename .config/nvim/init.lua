@@ -7,12 +7,12 @@ vim.o.hidden = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.updatetime = 300
-vim.bo.expandtab = true
 vim.bo.autoindent = true
+vim.bo.autoread = true
+vim.bo.expandtab = true
+vim.bo.shiftwidth = 2
 vim.bo.smartindent = true
 vim.bo.tabstop = 2
-vim.bo.shiftwidth = 2
-vim.bo.autoread = true
 vim.wo.cursorline = true
 vim.wo.number = true
 vim.cmd 'lan en_US.UTF-8'
