@@ -10,6 +10,8 @@ fi
 
 alias zshrc="vi ~/.zshrc && source ~/.zshrc"
 alias vimrc="vi ~/.vimrc"
+alias nvimconf="vi ~/.config/nvim/init.lua"
+alias dein="vi ~/.config/nvim/dein.toml"
 
 alias cl="clear"
 
