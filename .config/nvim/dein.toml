@@ -30,8 +30,33 @@ hook_add = '''
   if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
     let g:coc_global_extensions += ['coc-eslint']
   endif
-  :nmap <Leader>e <Cmd>CocCommand explorer<CR>
-  :nmap <Leader>lf <Cmd>CocList files<CR>
-  :nmap <Leader>lb <Cmd>CocList buffers<CR>
-  :nmap <Leader>lr <Cmd>CocList mru<CR>
+
+  " Go to code navigation.
+  nmap <silent> gd <Plug>(coc-definition)
+  nmap <silent> gy <Plug>(coc-type-definition)
+  nmap <silent> gi <Plug>(coc-implementation)
+  nmap <silent> gr <Plug>(coc-references)
+
+  " Use K to show documentation in preview window.
+  nnoremap <silent> K :call ShowDocumentation()<CR>
+
+  function! ShowDocumentation()
+    if CocAction('hasProvider', 'hover')
+      call CocActionAsync('doHover')
+    else
+      call feedkeys('K', 'in')
+    endif
+  endfunction
+
+  " Highlight the symbol and its references when holding the cursor.
+  autocmd CursorHold * silent call CocActionAsync('highlight')
+
+  " autocmd CursorHold * silent call ShowDocumentation()
+
+  " coc-lists
+  nmap <Leader>lf <Cmd>CocList files<CR>
+  nmap <Leader>lm <Cmd>CocList mru<CR>
+
+  " coc-explorer
+  nmap <Leader>e <Cmd>CocCommand explorer<CR>
 '''
