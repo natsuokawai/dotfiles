@@ -8,7 +8,7 @@ if (( ${+commands[bat]} )); then
   alias cat="bat"
 fi
 
-alias zshrc="vi ~/.zshrc && source ~/.zshrc"
+alias zshrc="vi ~/.zshrc"
 alias vimrc="vi ~/.vimrc"
 alias nvimconf="vi ~/.config/nvim/init.lua"
 alias dein="vi ~/.config/nvim/dein.toml"
