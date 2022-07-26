@@ -23,6 +23,7 @@
   poh = push origin HEAD
   br = branch
   cm = commit
+  cp = cherry-pick
 
 [delta]
  # features = side-by-side line-numbers decorations
