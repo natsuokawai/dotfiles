@@ -3,6 +3,7 @@ local api = vim.api
 ------------------------------
 -- basic options
 ------------------------------
+-- o : options, bo: buffer options, wo: window options
 vim.o.hidden = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
@@ -15,6 +16,7 @@ vim.bo.smartindent = true
 vim.bo.tabstop = 2
 vim.wo.cursorline = true
 vim.wo.number = true
+vim.wo.signcolumn = 'yes'
 vim.cmd 'lan en_US.UTF-8'
 vim.cmd 'set clipboard+=unnamedplus'
 
