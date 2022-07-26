@@ -22,5 +22,7 @@
         "typescriptreact"
     ],
     "explorer.file.showHiddenFiles": true,
-    "explorer.icon.enableNerdfont": true
+    "explorer.icon.enableNerdfont": true,
+    "git.addGBlameToVirtualText": true,
+    "solargraph.diagnostics": true
 }
