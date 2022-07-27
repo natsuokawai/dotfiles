@@ -72,24 +72,7 @@ _searchByGoogle () {
             str="$str${str:++}$i"
         done
     fi
-    open https://www.google.co.jp/search\?q\=$str
-}
-
-alias sbox='_scrapboxToday'
-_scrapboxToday () {
-    name=`date "+%Y-%m-%d"`
-    open https://scrapbox.io/natsuokawai-diary/$name
-}
-
-alias memo='_scrapboxMemo'
-_scrapboxMemo () {
-    local str opt
-    if [ $# != 0 ]; then
-        for i in $*; do
-            str="$str${str:+_}$i"
-        done
-    fi
-    open https://scrapbox.io/natsuokawai/$str
+    open https://www.google.co.jp/search\?lr=lang_en\&q\=$str
 }
 
 ##################################################
