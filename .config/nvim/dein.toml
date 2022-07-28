@@ -63,10 +63,11 @@ hook_add = '''
   " coc-lists
   nmap <Leader>lf <Cmd>CocList files<CR>
   nmap <Leader>lm <Cmd>CocList mru<CR>
+  nmap <Leader>lg <Cmd>CocList grep<CR>
 
   " coc-explorer
   nmap <Leader>e <Cmd>CocCommand explorer<CR>
 
   " coc-git
-  set statusline^=%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}%{get(b:,'coc_git_blame','')}
+  " set statusline+=%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}%{get(b:,'coc_git_blame','')}
 '''
