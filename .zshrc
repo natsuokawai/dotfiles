@@ -26,6 +26,7 @@ alias gd="git diff"
 alias gst="git status"
 alias gs="git status"
 alias cpbr="git_current_branch | pbcopy" # copy current git branch name to clipboard
+alias git_current_branch="git branch | sed  '/^\*/!d;s/\* //'"
 
 ## docker
 alias d="docker"

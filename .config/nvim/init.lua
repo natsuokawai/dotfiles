@@ -6,6 +6,8 @@ local api = vim.api
 -- o : options, bo: buffer options, wo: window options
 vim.o.hidden = true
 vim.o.ignorecase = true
+vim.o.matchtime = 1
+vim.o.showmatch = true
 vim.o.smartcase = true
 vim.o.updatetime = 300
 vim.bo.autoindent = true
@@ -19,6 +21,7 @@ vim.wo.number = true
 vim.wo.signcolumn = 'yes'
 vim.cmd 'lan en_US.UTF-8'
 vim.cmd 'set clipboard+=unnamedplus'
+vim.opt.fillchars = { vert = " " }
 
 ------------------------------
 -- key mappings
@@ -26,6 +29,7 @@ vim.cmd 'set clipboard+=unnamedplus'
 vim.g.mapleader = ' '
 api.nvim_set_keymap('n', '<C-N>', ':bnext<CR>', { noremap = true, silent = true })
 api.nvim_set_keymap('n', '<C-P>', ':bprevious<CR>', { noremap = true, silent = true })
+api.nvim_set_keymap('n', 'Y', 'y$', { noremap = true, silent = true })
 
 ------------------------------
 -- dein.vim settings
