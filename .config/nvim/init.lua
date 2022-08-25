@@ -23,6 +23,9 @@ vim.cmd 'lan en_US.UTF-8'
 vim.cmd 'set clipboard+=unnamedplus'
 vim.opt.fillchars = { vert = " " }
 
+-- hide line number in terminal
+vim.cmd('autocmd TermOpen * setlocal nonumber norelativenumber')
+
 ------------------------------
 -- key mappings
 ------------------------------
