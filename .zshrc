@@ -1,10 +1,10 @@
 ##################################################
 # aliases                                        #
 ##################################################
-if (( ${+commands[exa]} )); then
+if type exa > /dev/null; then
   alias ls="exa --icons"
 fi
-if (( ${+commands[bat]} )); then
+if type bat > /dev/null; then
   alias cat="bat"
 fi
 
