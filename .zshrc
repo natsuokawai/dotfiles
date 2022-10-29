@@ -45,6 +45,7 @@ export LANG=ja_JP.UTF-8
 export LESS="-iRMXS"
 export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:~/bin
+export PATH=$PATH:/opt/homebrew/bin
 
 setopt auto_cd
 function chpwd() { ls }
