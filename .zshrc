@@ -91,15 +91,6 @@ fi
 ## mysql
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
-## nvm
-if [ -s "$HOME/.nvm/nvm.sh" ]; then
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
-  alias nvm='unalias nvm node npm && . "$NVM_DIR"/nvm.sh && nvm'
-  alias node='unalias nvm node npm && . "$NVM_DIR"/nvm.sh && node'
-  alias npm='unalias nvm node npm && . "$NVM_DIR"/nvm.sh && npm'
-fi
-
 ## ghcup
 export PATH="$HOME/.ghcup/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -112,6 +103,9 @@ export PATH=$PATH:$GOPATH/bin
 
 ## fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+## asdf
+. /usr/local/opt/asdf/libexec/asdf.sh
 
 ##################################################
 # zinit                                          #
