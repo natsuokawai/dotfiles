@@ -29,6 +29,7 @@ hook_add = '''
   \'coc-styled-components',
   \'coc-json',
   \'coc-solargraph',
+  \'coc-yank',
   \]
   if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
     let g:coc_global_extensions += ['coc-prettier']
@@ -64,10 +65,14 @@ hook_add = '''
   nmap <Leader>lf <Cmd>CocList files<CR>
   nmap <Leader>lm <Cmd>CocList mru<CR>
   nmap <Leader>lg <Cmd>CocList grep<CR>
+  nnoremap <silent> <Leader>w  :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
 
   " coc-explorer
   nmap <Leader>e <Cmd>CocCommand explorer<CR>
 
   " coc-git
   " set statusline+=%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}%{get(b:,'coc_git_blame','')}
+
+  " coc-yank
+  nnoremap <silent> <Leader>y :<C-u>CocList -A --normal yank<cr>
 '''
