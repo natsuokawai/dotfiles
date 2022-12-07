@@ -21,6 +21,7 @@ vim.wo.number = true
 vim.wo.signcolumn = 'yes'
 vim.cmd 'lan en_US.UTF-8'
 vim.cmd 'set clipboard+=unnamedplus'
+vim.cmd 'set noswapfile'
 vim.opt.fillchars = { vert = " " }
 
 -- hide line number in terminal
@@ -33,6 +34,8 @@ vim.g.mapleader = ' '
 api.nvim_set_keymap('n', '<C-N>', ':bnext<CR>', { noremap = true, silent = true })
 api.nvim_set_keymap('n', '<C-P>', ':bprevious<CR>', { noremap = true, silent = true })
 api.nvim_set_keymap('n', 'Y', 'y$', { noremap = true, silent = true })
+-- paste without copy
+api.nvim_set_keymap('v', '<C-p>', '"0p<CR>', { noremap = true, silent = true })
 
 ------------------------------
 -- dein.vim settings
