@@ -1,31 +1,31 @@
 {
-    "suggest.triggerAfterInsertEnter": true,
-    "suggest.noselect": false,
-    "suggest.minTriggerInputLength": 2,
-    "suggest.acceptSuggestionOnCommitCharacter": true,
-    "suggest.snippetIndicator": " ►",
-    "suggest.enablePreview": true,
-    "coc.preferences.hoverTarget": "float",
-    "coc.preferences.formatOnType": true,
-    "coc.preferences.formatOnSaveFiletypes": [
-        "typescript",
-        "typescriptreact",
-        "javascript",
-        "javascriptreact"
-    ],
-    "tsserver.formatOnType": true,
-    "eslint.autoFixOnSave": true,
-    "eslint.filetypes": [
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact"
-    ],
-    "explorer.file.showHiddenFiles": true,
-    "explorer.icon.enableNerdfont": true,
-    "git.addGBlameToVirtualText": true,
-    "solargraph.diagnostics": true,
-    "languageserver": {
+  "suggest.triggerAfterInsertEnter": true,
+  "suggest.noselect": false,
+  "suggest.minTriggerInputLength": 2,
+  "suggest.acceptSuggestionOnCommitCharacter": true,
+  "suggest.snippetIndicator": " ►",
+  "suggest.enablePreview": true,
+  "coc.preferences.hoverTarget": "float",
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+      "typescript",
+      "typescriptreact",
+      "javascript",
+      "javascriptreact"
+  ],
+  "tsserver.formatOnType": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact"
+  ],
+  "explorer.file.showHiddenFiles": true,
+  "explorer.icon.enableNerdfont": true,
+  "git.addGBlameToVirtualText": true,
+  "solargraph.diagnostics": true,
+  "languageserver": {
     "ccls": {
       "command": "ccls",
       "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],

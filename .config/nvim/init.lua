@@ -10,12 +10,9 @@ vim.o.matchtime = 1
 vim.o.showmatch = true
 vim.o.smartcase = true
 vim.o.updatetime = 300
-vim.bo.autoindent = true
 vim.bo.autoread = true
-vim.bo.expandtab = true
 vim.bo.shiftwidth = 2
 vim.bo.smartindent = true
-vim.bo.tabstop = 2
 vim.wo.cursorline = true
 vim.wo.number = true
 vim.wo.signcolumn = 'yes'
@@ -23,6 +20,15 @@ vim.cmd 'lan en_US.UTF-8'
 vim.cmd 'set clipboard+=unnamedplus'
 vim.cmd 'set noswapfile'
 vim.opt.fillchars = { vert = " " }
+
+vim.cmd [[
+set autoindent
+set expandtab
+set shiftwidth=2
+set smartindent
+set softtabstop=2
+set tabstop=2
+]]
 
 -- hide line number in terminal
 vim.cmd('autocmd TermOpen * setlocal nonumber norelativenumber')

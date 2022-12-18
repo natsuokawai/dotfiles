@@ -3,11 +3,11 @@
 repo = 'ap/vim-buftabline'
 
 # Change input mode to English when exiting insert mode
-[[plugins]]
-repo = 'yoshida-m-3/vim-im-select'
-hook_add = '''
-  let g:im_select_default = 'com.google.inputmethod.Japanese.Roman'
-'''
+# [[plugins]]
+# repo = 'yoshida-m-3/vim-im-select'
+# hook_add = '''
+#   let g:im_select_default = 'com.google.inputmethod.Japanese.Roman'
+# '''
 
 [[plugins]]
 repo = 'cocopon/iceberg.vim '
@@ -33,10 +33,6 @@ hook_add = '''
   \]
   if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
     let g:coc_global_extensions += ['coc-prettier']
-  endif
-
-  if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
-    let g:coc_global_extensions += ['coc-eslint']
   endif
 
   " Go to code navigation.
