@@ -10,7 +10,7 @@ repo = 'ap/vim-buftabline'
 # '''
 
 [[plugins]]
-repo = 'cocopon/iceberg.vim '
+repo = 'cocopon/iceberg.vim'
 hook_add = '''
   colorscheme iceberg
 '''
@@ -27,8 +27,8 @@ hook_add = '''
   \'coc-git',
   \'coc-tsserver',
   \'coc-styled-components',
-  \'coc-json',
   \'coc-solargraph',
+  \'coc-json',
   \'coc-yank',
   \]
   if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
@@ -61,7 +61,8 @@ hook_add = '''
   nmap <Leader>lf <Cmd>CocList files<CR>
   nmap <Leader>lm <Cmd>CocList mru<CR>
   nmap <Leader>lg <Cmd>CocList grep<CR>
-  nnoremap <silent> <Leader>w  :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
+  nnoremap <silent> <Leader>w  :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
+  nnoremap <silent> <Leader>W  :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
 
   " coc-explorer
   nmap <Leader>e <Cmd>CocCommand explorer<CR>

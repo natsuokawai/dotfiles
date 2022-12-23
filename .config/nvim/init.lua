@@ -9,6 +9,7 @@ vim.o.ignorecase = true
 vim.o.matchtime = 1
 vim.o.showmatch = true
 vim.o.smartcase = true
+vim.o.termguicolors = true
 vim.o.updatetime = 300
 vim.bo.autoread = true
 vim.bo.shiftwidth = 2
