@@ -89,7 +89,11 @@ if [ -e "$HOME/.rbenv" ]; then
 fi
 
 ## asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+if [ -e "/opt/homebrew/opt/asdf/libexec/asdf.sh" ]; then
+  . /opt/homebrew/opt/asdf/libexec/asdf.sh
+elif [ -e "/usr/local/opt/asdf/libexec/asdf.sh" ]; then
+  . /usr/local/opt/asdf/libexec/asdf.sh
+fi
 
 ## mysql
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
@@ -106,9 +110,6 @@ export PATH=$PATH:$GOPATH/bin
 
 ## fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-## asdf
-. /usr/local/opt/asdf/libexec/asdf.sh
 
 ##################################################
 # zinit                                          #
