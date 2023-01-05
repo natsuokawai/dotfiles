@@ -155,5 +155,3 @@ zinit light "sindresorhus/pure"
 # if (which zprof > /dev/null 2>&1) ;then
 #   zprof
 # fi
-export PATH="/opt/homebrew/opt/imagemagick@6/bin:$PATH"
-export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
