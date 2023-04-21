@@ -14,6 +14,8 @@ repo = 'cocopon/iceberg.vim'
 hook_add = '''
   colorscheme iceberg
 '''
+[[plugins]]
+repo = 'github/copilot.vim'
 
 # LSP and other support tools
 [[plugins]]
@@ -27,7 +29,6 @@ hook_add = '''
   \'coc-git',
   \'coc-tsserver',
   \'coc-styled-components',
-  \'coc-solargraph',
   \'coc-json',
   \'coc-yank',
   \]
