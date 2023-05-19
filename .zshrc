@@ -38,6 +38,10 @@ alias rs="bundle exec rails server"
 alias rc="bundle exec rails console"
 alias rsp="bundle exec rspec"
 
+## python
+alias python="python3"
+alias pip="pip3"
+
 ##################################################
 # basic                                          #
 ##################################################
