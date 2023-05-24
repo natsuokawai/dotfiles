@@ -4,6 +4,9 @@
 # rigpreg ignore file
 .rgignore
 
+# asdf
+.tool-versions
+
 # vim
 ## Swap
 [._]*.s[a-v][a-z]
