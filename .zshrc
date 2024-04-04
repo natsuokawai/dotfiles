@@ -106,12 +106,6 @@ export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PATH="$HOME/.ghcup/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
-## go
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin
-export PATH=$PATH:$GOPATH/bin
-
 ## fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

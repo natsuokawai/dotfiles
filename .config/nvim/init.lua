@@ -21,6 +21,8 @@ vim.cmd 'lan en_US.UTF-8'
 vim.cmd 'set clipboard+=unnamedplus'
 vim.cmd 'set noswapfile'
 vim.opt.fillchars = { vert = " " }
+vim.opt.swapfile = false
+vim.opt.winblend = 10
 
 vim.cmd [[
 set autoindent
@@ -78,3 +80,4 @@ if vim.fn.len(removed_plugins) > 0 then
   vim.fn.map(removed_plugins, "delete(v:val, 'rf')")
   vim.fn['dein#recache_runtimepath']()
 end
+

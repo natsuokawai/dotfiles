@@ -13,6 +13,7 @@
     "javascript",
     "javascriptreact"
   ],
+  "coc.preferences.formatOnSaveFiletypes": ["go"],
   "tsserver.formatOnType": true,
   "eslint.autoFixOnSave": true,
   "eslint.filetypes": [
@@ -21,10 +22,14 @@
     "typescript",
     "typescriptreact"
   ],
+  "stylelintplus.autoFixOnFormat": true,
+  "stylelintplus.autoFixOnSave": true,
+  "stylelintplus.validateOnSave": true,
   "explorer.file.showHiddenFiles": true,
   "explorer.icon.enableNerdfont": true,
   "git.addGBlameToVirtualText": true,
   "solargraph.diagnostics": true,
+  "diagnostic.enableHighlightLineNumber": true,
   "languageserver": {
     "ccls": {
       "command": "ccls",
@@ -35,6 +40,15 @@
            "directory": "/tmp/ccls-cache"
          }
        }
+    },
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true,
+        "completeUnimported": true
+      }
     }
   }
 }

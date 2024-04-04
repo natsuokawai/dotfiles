@@ -8,6 +8,7 @@ window:
   padding:
     x: 10
     y: 15
+  opacity: 0.95
 colors:
   primary:
     background: '#161821'
