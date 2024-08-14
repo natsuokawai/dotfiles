@@ -106,8 +106,17 @@ export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PATH="$HOME/.ghcup/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
+## go
+if command -v go >/dev/null 2>&1; then
+  export PATH=$PATH:$(go env GOPATH)/bin
+fi
+
 ## fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+## google cloud
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
 ##################################################
 # zinit                                          #
