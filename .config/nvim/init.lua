@@ -81,3 +81,7 @@ if vim.fn.len(removed_plugins) > 0 then
   vim.fn['dein#recache_runtimepath']()
 end
 
+------------------------------
+-- plugin settings
+------------------------------
+require('copilot.init')

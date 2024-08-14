@@ -19,6 +19,14 @@ hook_add = '''
 repo = 'github/copilot.vim'
 
 [[plugins]]
+repo = 'nvim-lua/plenary.nvim'
+
+[[plugins]]
+repo = 'CopilotC-Nvim/CopilotChat.nvim'
+depends = ['github/copilot.vim', 'nvim-lua/plenary.nvim']
+branch = 'canary'
+
+[[plugins]]
 repo = 'ap/vim-css-color'
 
 # LSP and other support tools
