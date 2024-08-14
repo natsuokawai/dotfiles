@@ -8,12 +8,14 @@
   "coc.preferences.hoverTarget": "float",
   "coc.preferences.formatOnType": true,
   "coc.preferences.formatOnSaveFiletypes": [
+    "go",
     "typescript",
     "typescriptreact",
     "javascript",
     "javascriptreact"
   ],
   "coc.preferences.formatOnSaveFiletypes": ["go"],
+  "list.source.grep.args": ["-u"],
   "tsserver.formatOnType": true,
   "eslint.autoFixOnSave": true,
   "eslint.filetypes": [
@@ -49,6 +51,16 @@
         "usePlaceholders": true,
         "completeUnimported": true
       }
-    }
+    },
+    "terraform": {
+			"command": "terraform-ls",
+			"args": ["serve"],
+			"filetypes": [
+				"terraform",
+				"tf"
+			],
+			"initializationOptions": {},
+			"settings": {}
+		}
   }
 }
