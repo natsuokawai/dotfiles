@@ -21,6 +21,8 @@ vim.cmd 'lan en_US.UTF-8'
 vim.cmd 'set clipboard+=unnamedplus'
 vim.cmd 'set noswapfile'
 vim.opt.fillchars = { vert = " " }
+vim.opt.list = true
+vim.opt.listchars = "eol:↲,tab:|->,lead:·,space:␣,trail:•,extends:→,precedes:←,nbsp:␣"
 vim.opt.swapfile = false
 vim.opt.winblend = 10
 
