@@ -74,6 +74,9 @@ hook_add = '''
   nmap <Leader>lf <Cmd>CocList files<CR>
   nmap <Leader>lm <Cmd>CocList mru<CR>
   nmap <Leader>lg <Cmd>CocList grep<CR>
+  nmap <Leader>lb <Cmd>CocList buffers<CR>
+  nmap <Leader>lw <Cmd>CocList words<CR>
+  nmap <Leader>lv <Cmd>CocList vimcommands<CR>
   nnoremap <silent> <Leader>w  :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
   nnoremap <silent> <Leader>W  :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
 
