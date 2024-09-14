@@ -14,7 +14,10 @@
     "javascript",
     "javascriptreact"
   ],
-  "coc.preferences.formatOnSaveFiletypes": ["go"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "go",
+    "rust"
+  ],
   "list.source.grep.args": ["-u"],
   "tsserver.formatOnType": true,
   "eslint.autoFixOnSave": true,
