@@ -52,7 +52,17 @@
       "filetypes": ["go"],
       "initializationOptions": {
         "usePlaceholders": true,
-        "completeUnimported": true
+        "completeUnimported": true,
+        "staticcheck": true,
+        "hints": {
+          "assignVariableTypes": false,
+          "compositeLiteralFields": false,
+          "compositeLiteralTypes": false,
+          "constantValues": true,
+          "functionTypeParameters": false,
+          "parameterNames": true,
+          "rangeVariableTypes": true
+        }
       }
     },
     "terraform": {
