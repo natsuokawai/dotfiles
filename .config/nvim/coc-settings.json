@@ -1,50 +1,40 @@
 {
-  "suggest.triggerAfterInsertEnter": true,
-  "suggest.noselect": false,
-  "suggest.minTriggerInputLength": 2,
-  "suggest.acceptSuggestionOnCommitCharacter": true,
-  "suggest.snippetIndicator": " ►",
-  "suggest.enablePreview": true,
-  "coc.preferences.hoverTarget": "float",
-  "coc.preferences.formatOnType": true,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "go",
-    "typescript",
-    "typescriptreact",
-    "javascript",
-    "javascriptreact"
-  ],
-  "coc.preferences.formatOnSaveFiletypes": [
-    "go",
-    "rust"
-  ],
-  "list.source.grep.args": ["-u"],
-  "tsserver.formatOnType": true,
+  "coc.preferences.formatOnSave": true,
+  "diagnostic.enableHighlightLineNumber": true,
   "eslint.autoFixOnSave": true,
-  "eslint.filetypes": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
-  "stylelintplus.autoFixOnFormat": true,
-  "stylelintplus.autoFixOnSave": true,
-  "stylelintplus.validateOnSave": true,
+  "eslint.workingDirectories": [{ "mode": "auto" }],
   "explorer.file.showHiddenFiles": true,
   "explorer.icon.enableNerdfont": true,
   "git.addGBlameToVirtualText": true,
+  "hover.floatConfig": {
+    "border": true,
+    "highlight": "CocFloating"
+  },
+  "hover.previewMaxHeight": 24,
+  "list.floatPreview": true,
+  "list.source.files.args": ["--hidden", "--files"],
+  "list.source.grep.args": ["-u"],
   "solargraph.diagnostics": true,
-  "diagnostic.enableHighlightLineNumber": true,
+  "suggest.acceptSuggestionOnCommitCharacter": true,
+  "suggest.insertMode": "insert",
+  "suggest.triggerAfterInsertEnter": true,
+  "suggest.selection": "first",
+  "typescript.inlayHints.enumMemberValues.enabled": false,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.parameterNames.enabled": "none",
+  "typescript.inlayHints.parameterTypes.enabled": false,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": false,
+  "typescript.inlayHints.variableTypes.enabled": false,
   "languageserver": {
     "ccls": {
       "command": "ccls",
       "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
       "rootPatterns": [".ccls-root", "compile_commands.json"],
       "initializationOptions": {
-         "cache": {
-           "directory": "/tmp/ccls-cache"
-         }
-       }
+        "cache": {
+          "directory": "/tmp/ccls-cache"
+        }
+      }
     },
     "golang": {
       "command": "gopls",
@@ -66,14 +56,11 @@
       }
     },
     "terraform": {
-			"command": "terraform-ls",
-			"args": ["serve"],
-			"filetypes": [
-				"terraform",
-				"tf"
-			],
-			"initializationOptions": {},
-			"settings": {}
-		}
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": ["terraform", "tf"],
+      "initializationOptions": {},
+      "settings": {}
+    }
   }
 }
